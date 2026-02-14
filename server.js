@@ -9,7 +9,11 @@ app.get("/", (req, res) =>{
 });
 
 app.get("/time", (req, res) =>{
-    res.json({time: new Data});
+    res.json({ time: new Date() });
+});
+
+app.get("/name/:name", (req, res) =>{
+    res.send(`Hello ${req.params.name}`);
 });
 
 
